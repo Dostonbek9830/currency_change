@@ -118,15 +118,47 @@
 // debugger;
 
 
-let userAge = prompt("Enter your age");
-let userMoney = prompt("Enter money for buy cigarettes");
+// let userAge = prompt("Enter your age");
+// let userMoney = prompt("Enter money for buy cigarettes");
 
-console.log(`Age: ${userAge}
-Money: ${userMoney}`);
+// console.log(`Age: ${userAge}
+// Money: ${userMoney}`);
 
-if(userAge >= 18 && userMoney >= 16000) {
-    console.log("You can buy cigarettes")
+// if(userAge >= 18 && userMoney >= 16000) {
+//     console.log("You can buy cigarettes")
+// } else {
+//     console.log("Sorry, you cannot buy cigarettes")
+// }
+
+var userName = prompt("Enter your name");
+var userMoney = Number(prompt("Enter your money that you want to spend to holiday"));
+
+console.log(`Hello, ${userName}
+You want to spend $${userMoney}
+You might spend amount of money on the below:`)
+
+//EXPENSES
+
+var ticketFare = 500;
+var hotelFee = 250;
+var entertainmentFee = 120;
+
+console.log(`Ticket fare: $${Number(ticketFare)}
+Hotel price: $${Number(hotelFee)}
+Additional expenses: €${Number(entertainmentFee)}`)
+
+var USD_CURRENCY = 10900;
+var EUR_CURRENCY = 12272;
+
+var totalMoney = ticketFare * USD_CURRENCY + hotelFee * USD_CURRENCY + entertainmentFee * EUR_CURRENCY;
+
+if(userMoney >= totalMoney) {
+    console.log(`${userName}, have a nice flight!`)
 } else {
-    console.log("Sorry, you cannot buy cigarettes")
+    console.log(`${userName}, you cannot go on holiday`)
 }
+
+
+
+
 
